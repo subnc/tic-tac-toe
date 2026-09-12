@@ -34,6 +34,7 @@ The game is played between two players. Player X starts the game, followed by Pl
 
 ## Project Structure
 
+```text
 tic-tac-toe/
 │
 ├── index.html
