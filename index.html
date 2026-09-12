@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+
+    <!-- Top Controls -->
+
+    <div class="top-controls">
+
+        <div class="theme">
+
+            <span>Theme:</span>
+
+            <button type="button" class="theme-button active" data-theme="green">
+                Green
+            </button>
+
+            <button type="button" class="theme-button" data-theme="blue">
+                Blue
+            </button>
+
+            <button type="button" class="theme-button" data-theme="dark">
+                Dark
+            </button>
+
+        </div>
+
+        <button type="button" class="reset-score">
+            Reset Score
+        </button>
+
+    </div>
+
+
+    <!-- Main Game -->
+
+    <div class="main-container">
+
+        <div class="heading">
+            Tic Tac Toe
+        </div>
+
+
+        <!-- Score -->
+
+        <div class="score">
+
+            <div>
+                X Wins: <span id="x-score">0</span>
+            </div>
+
+            <div>
+                O Wins: <span id="o-score">0</span>
+            </div>
+
+        </div>
+
+
+        <!-- Game Status -->
+
+        <div class="status">
+            Player X's Turn
+        </div>
+
+
+        <!-- Game Board -->
+
+        <div class="board">
+
+            <button type="button" class="cell"></button>
+            <button type="button" class="cell"></button>
+            <button type="button" class="cell"></button>
+
+            <button type="button" class="cell"></button>
+            <button type="button" class="cell"></button>
+            <button type="button" class="cell"></button>
+
+            <button type="button" class="cell"></button>
+            <button type="button" class="cell"></button>
+            <button type="button" class="cell"></button>
+
+        </div>
+
+
+        <!-- Restart -->
+
+        <button type="button" class="restart">
+            Restart Game
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+<!-- subn -->
+</html>

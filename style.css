@@ -1,0 +1,487 @@
+/* Page */
+
+body {
+    margin: 0;
+    background-color: #dcefe3;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Top Controls */
+
+.top-controls {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 6px 8px;
+
+    border: 1px solid #b4d2bd;
+    border-radius: 7px;
+
+    background-color: #e8f4ec;
+}
+
+
+/* Theme */
+
+.theme {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #285943;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Theme Buttons */
+
+.theme-button {
+    padding: 6px 9px;
+
+    border: 1px solid #6b9b7a;
+    border-radius: 5px;
+
+    background-color: transparent;
+    color: #285943;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.theme-button:hover {
+    background-color: #c4dfcc;
+}
+
+.theme-button.active {
+    background-color: #356f50;
+    color: white;
+    border-color: #356f50;
+}
+
+
+/* Main Container */
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+
+/* Heading */
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #173b2b;
+}
+
+
+/* Status */
+
+.status {
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 18px;
+
+    color: #3f6650;
+}
+
+
+/* Score */
+
+.score {
+    display: flex;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.score div {
+    min-width: 100px;
+
+    padding: 8px 12px;
+
+    text-align: center;
+
+    border: 1px solid #6b9b7a;
+    border-radius: 6px;
+
+    background-color: #c4dfcc;
+    color: #285943;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.score span {
+    color: #173b2b;
+    font-size: 18px;
+}
+
+
+/* Game Board */
+
+.board {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 7px;
+}
+
+
+/* Cells */
+
+.cell {
+    width: 80px;
+    height: 80px;
+
+    border: 2px solid #6b9b7a;
+    border-radius: 5px;
+
+    background-color: #c4dfcc;
+
+    cursor: pointer;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    color: #173b2b;
+}
+
+.cell:hover {
+    background-color: #a8cfb5;
+}
+
+
+/* X and O */
+
+.x {
+    color: #173b2b;
+}
+
+.o {
+    color: #285943;
+}
+
+
+/* Winner */
+
+.winner {
+    background-color: #8fb8a0;
+    color: #173b2b;
+
+    animation: winnerEffect 0.8s ease-in-out;
+}
+
+@keyframes winnerEffect {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* Game Buttons */
+
+.restart,
+.reset-score {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+
+    color: #f1f8f3;
+}
+
+
+/* Restart Button */
+
+.restart {
+    width: 150px;
+
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    background-color: #356f50;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.restart:hover {
+    background-color: #285943;
+}
+
+
+/* Reset Score Button */
+
+.top-controls .reset-score {
+    width: auto;
+
+    margin-top: 0;
+    padding: 6px 11px;
+
+    background-color: transparent;
+    color: #356f50;
+
+    border: 1px solid #6b9b7a;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.top-controls .reset-score:hover {
+    background-color: #c4dfcc;
+}
+
+
+/* Blue Theme */
+
+body.blue {
+    background-color: #e3eef7;
+}
+
+body.blue .top-controls {
+    border-color: #b5cddd;
+    background-color: #edf5fa;
+}
+
+body.blue .heading {
+    color: #173b5c;
+}
+
+body.blue .status {
+    color: #456b8c;
+}
+
+body.blue .theme {
+    color: #315a7d;
+}
+
+body.blue .theme-button {
+    border-color: #6b91b3;
+    background-color: #f1f6fa;
+    color: #315a7d;
+}
+
+body.blue .theme-button:hover {
+    background-color: #c7dbea;
+}
+
+body.blue .theme-button.active {
+    background-color: #35658a;
+    color: white;
+    border-color: #35658a;
+}
+
+body.blue .score div {
+    border-color: #6b91b3;
+    background-color: #c7dbea;
+    color: #315a7d;
+}
+
+body.blue .score span {
+    color: #173b5c;
+}
+
+body.blue .cell {
+    border-color: #6b91b3;
+    background-color: #c7dbea;
+    color: #173b5c;
+}
+
+body.blue .cell:hover {
+    background-color: #abc9df;
+}
+
+body.blue .x {
+    color: #173b5c;
+}
+
+body.blue .o {
+    color: #315a7d;
+}
+
+body.blue .winner {
+    background-color: #91b4cf;
+    color: #173b5c;
+}
+
+body.blue .restart {
+    background-color: #35658a;
+}
+
+body.blue .restart:hover {
+    background-color: #284f6d;
+}
+
+body.blue .top-controls .reset-score {
+    border-color: #6b91b3;
+    color: #35658a;
+}
+
+body.blue .top-controls .reset-score:hover {
+    background-color: #c7dbea;
+}
+
+
+/* Dark Theme */
+
+body.dark {
+    background-color: #202b27;
+}
+
+body.dark .top-controls {
+    border-color: #52675d;
+    background-color: #293731;
+}
+
+body.dark .heading {
+    color: #d8e8df;
+}
+
+body.dark .status {
+    color: #a9c1b4;
+}
+
+body.dark .theme {
+    color: #c7d9cf;
+}
+
+body.dark .theme-button {
+    border-color: #60786c;
+    background-color: #33443c;
+    color: #c7d9cf;
+}
+
+body.dark .theme-button:hover {
+    background-color: #43574d;
+}
+
+body.dark .theme-button.active {
+    background-color: #416451;
+    color: white;
+    border-color: #416451;
+}
+
+body.dark .score div {
+    border-color: #60786c;
+    background-color: #33443c;
+    color: #c7d9cf;
+}
+
+body.dark .score span {
+    color: #e1eee7;
+}
+
+body.dark .cell {
+    border-color: #60786c;
+    background-color: #33443c;
+    color: #e1eee7;
+}
+
+body.dark .cell:hover {
+    background-color: #43574d;
+}
+
+body.dark .x {
+    color: #e1eee7;
+}
+
+body.dark .o {
+    color: #a9d0b8;
+}
+
+body.dark .winner {
+    background-color: #526b5e;
+    color: #e1eee7;
+}
+
+body.dark .restart {
+    background-color: #416451;
+}
+
+body.dark .restart:hover {
+    background-color: #527b63;
+}
+
+body.dark .top-controls .reset-score {
+    border-color: #60786c;
+    color: #a9cbb8;
+}
+
+body.dark .top-controls .reset-score:hover {
+    background-color: #43574d;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .top-controls {
+        position: static;
+
+        justify-content: center;
+        flex-wrap: wrap;
+
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .main-container {
+        height: auto;
+        min-height: 85vh;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .status {
+        font-size: 18px;
+    }
+
+    .score {
+        gap: 10px;
+    }
+
+    .score div {
+        min-width: 70px;
+        font-size: 14px;
+    }
+
+    .cell {
+        width: 65px;
+        height: 65px;
+        font-size: 26px;
+    }
+
+    .restart {
+        width: 130px;
+        font-size: 14px;
+        padding: 9px 18px;
+    }
+
+}
+/* subnc */
